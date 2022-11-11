@@ -251,7 +251,7 @@ Creator.runEntity = function(entity)
                     if Char:FindFirstChild("Crucifix") then
                         Connections[entity.Model].Movement:Disconnect()
                         entity.Model:SetAttribute("StopMovement", true)
-                        Char:FindFIrstChild("Crucifix"):Destroy()
+                        Char:FindFirstChild("Crucifix"):Destroy()
                         -- Repent
 
                         local nodeIdx, nearest = nil, math.huge
