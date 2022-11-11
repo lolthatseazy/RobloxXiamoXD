@@ -251,7 +251,6 @@ Creator.runEntity = function(entity)
                     if Char:FindFirstChild("Crucifix") then
                         Connections[entity.Model].Movement:Disconnect()
                         entity.Model:SetAttribute("StopMovement", true)
-                        Char:FindFirstChild("Crucifix"):Destroy()
                         -- Repent
 
                         local nodeIdx, nearest = nil, math.huge
@@ -267,7 +266,7 @@ Creator.runEntity = function(entity)
                         for i = nodeIdx, 1, -1 do
                             drag(entity.Model, nodes[i].Position + Vector3.new(0, 3.5 + entity.Config.HeightOffset, 0), entity.Config.Speed)
                         end
-
+                        Char:FindFirstChild("Crucifix"):Destroy()
                         destroy(entity)
 
                         return
